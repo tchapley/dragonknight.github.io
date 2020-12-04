@@ -1,0 +1,152 @@
+.page-title {
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+#boss-list {
+    list-style-type: none;
+}
+
+#boss-list > li {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.wrapper {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: 
+        "header header"
+        "left right"
+        "footer footer";
+}
+
+.header {
+    border: 1px solid green;
+    height: 100%;
+    grid-area: header;
+}
+
+.left {
+    border: 1px solid red;
+    height: 100%;
+    grid-area: left;
+    padding: 10px;
+}
+
+.right {
+    border: 1px solid blue;
+    height: 100%;
+    grid-area: right;
+    padding: 10px;
+}
+
+.footer {
+    border: 1px solid yellow;
+    height: 100%;
+    grid-area: footer;
+}
+
+.abilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "ability action";
+}
+
+.hero {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.phase-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+        "title title"
+        "abilities abilities";
+}
+
+.phase-title {
+    padding: 10px 5px;
+    grid-area: title;
+}
+
+.phase-title > p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.phase-abilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(75px, 1fr));
+    grid-auto-flow: row;
+    padding: 5px;
+    grid-area: abilities;
+    grid-column-gap: 5px;
+}
+
+.phase-abilities > .phase-start {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.phase-start > p {
+    font-size: 16px;
+    margin: 10px
+}
+
+.phase-abilities > div {
+    border: 1px solid black;
+    margin-bottom: 3px;
+    padding: 10px;
+}
+
+.phase-abilities h6 {
+    font-size: 24px;
+}
+
+.phase-abilities a {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.heroic-only::after {
+    color: red;
+    font-size: 16px;
+    content: " - Heroic Only"
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tank {
+    background-color: cornflowerblue;
+}
+
+.heal {
+    background-color: darkseagreen;
+}
+
+.dps {
+
+}
+
+.map {
+    grid-column: 1 / 3;
+}
+
+.hero {
+    font-size: 48px;
+    font-weight: bold;
+}
